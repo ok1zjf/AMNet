@@ -1,0 +1,2 @@
+https://kingston.box.com/shared/static/uu6q8lfbx6t41fj90l66xccl0gftktta.zip sun_ResNet50FC_lstm3.zip
+https://kingston.box.com/shared/static/icv04m1pscn8odggzvi0iruq153mpp9i.zip sun_ResNet50FC_lstm3_noatt.zip

@@ -1,0 +1,3 @@
+https://kingston.box.com/shared/static/di45pmcnm0xrykxeztqwds818lidqg6q.zip lamem_ResNet50FC_lstm3.zip
+https://kingston.box.com/shared/static/k4kuy6x3haflgk2i786buf55dwt543f0.zip lamem_ResNet50FC_lstm3_noatt.zip
+https://kingston.box.com/shared/static/571pjwu81eafz2xi9c6r7i3nbnplpe7m.zip lamem_ResNet101FC_lstm3.zip

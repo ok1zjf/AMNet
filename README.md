@@ -1,5 +1,5 @@
 # AMNet: Memorability Estimation with Attention
-A PyTorch implementation of our paper [AMNet: Memorability Estimation with Attention]() (available soon on [arXiv](https://arxiv.org/))
+A PyTorch implementation of our paper [AMNet: Memorability Estimation with Attention](https://arxiv.org/abs/1804.03115)
 by Jiri Fajtl, Vasileios Argyriou, Dorothy Monekosso and Paolo Remagnino. This paper will be presented 
 at [CVPR 2018](http://cvpr2018.thecvf.com/).
  

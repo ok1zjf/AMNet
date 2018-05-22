@@ -21,6 +21,7 @@ from amnet_model import *
 import amnet_model as amnet_model
 from config import *
 from utils import *
+from image_dataset import *
 
 
 # ------------------------------------------------------------------------------------------
@@ -35,6 +36,7 @@ class PredictionResult():
         self.attention_masks = []
         self.inference_took = 0
         self.image_names = []
+        self.images = None # If source images are pre-loaded this atribute will hold their bitmaps
 
     def write_stdout(self):
         print(self.__str__())
@@ -57,6 +59,7 @@ class PredictionResult():
 
 
     def get_attention_maps(self, show=False):
+
         images = self.image_names
         att_maps = self.attention_masks
 
@@ -70,7 +73,11 @@ class PredictionResult():
         for b in range(num_images):
 
             # Read the source image and resize it to 224x224
-            img = cv2.imread(images[b])
+            if self.images is None:
+                img = cv2.imread(images[b])
+            else:
+                img = self.images[b]
+
             img = cv2.resize(img, out_size)
 
             # Create an empty output image
@@ -646,5 +653,22 @@ class AMNet:
         pr = self.predict(loader)
         return pr
 
+
+    def predict_memorability_image_batch(self, image_batch):
+
+        # Build the dataset directly from loaded images
+        dataset = ImageDataset(images=image_batch, transform=self.test_transform)
+
+        batch_size = self.hps.test_batch_size
+        if len(dataset.data) < batch_size:
+            batch_size = len(dataset.data)
+            print("Reducing batch size from ", self.hps.test_batch_size, "to",batch_size)
+
+        num_workers = 8
+        loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=False, drop_last=False,
+                                                  num_workers=num_workers)
+
+        pr = self.predict(loader)
+        return pr
 
 

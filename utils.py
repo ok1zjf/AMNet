@@ -43,7 +43,7 @@ def get_video_list(video_path, max_len=-1):
     return list_files(video_path, extensions=['avi', 'flv', 'mpg', 'mp4'], sort=True, max_len=max_len)
 
 def get_image_list(video_path, max_len=-1):
-    return list_files(video_path, extensions=['jpg', 'jpeg'], sort=True, max_len=max_len)
+    return list_files(video_path, extensions=['jpg', 'jpeg', 'png'], sort=True, max_len=max_len)
 
 
 def get_split_files(dataset_path, splits_path, split_name, absolute_path=False):

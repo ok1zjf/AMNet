@@ -125,11 +125,12 @@ or see [main.py](main.py). If you want to experiment with other parameters the b
 ## Cite
 If you use this code or reference our paper in your work please cite this publication.
 ```
-@misc{fa2018amnet,
-author = {Jiri Fajtl, Vasileios Argyriou, Dorothy Monekosso, Paolo Remagnino},
-title = {AMNet: Memorability Estimation with Attention},
-journal = {Proceedings of the IEEE conference on Computer Vision and Pattern Recognition},
-year = {2018}
+@inproceedings{fajtl2018amnet,
+  title={AMNet: Memorability Estimation with Attention},
+  author={Fajtl, Jiri and Argyriou, Vasileios and Monekosso, Dorothy and Remagnino, Paolo},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={6363--6372},
+  year={2018}
 }
 ```
 

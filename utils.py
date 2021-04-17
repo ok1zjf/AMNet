@@ -168,7 +168,7 @@ def ge_pkg_versions():
     dep_versions['python'] = sys.version_info[0]
     dep_versions['torch'] = torch.__version__
     dep_versions['numpy'] = np.__version__
-    dep_versions['PIL'] = Image.VERSION
+    dep_versions['PIL'] = Image.__version__
 
     dep_versions['OpenCV'] = 'NA'
     if 'cv2' in sys.modules:

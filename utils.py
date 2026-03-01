@@ -152,14 +152,15 @@ def ge_pkg_versions():
     display_driver = run_command(cmd)
     dep_versions['display'] = display_driver
 
-    dep_versions['cuda'] = 'NA'
-    cuda_home = '/usr/local/cuda/'
-    if 'CUDA_HOME' in os.environ:
-        cuda_home = os.environ['CUDA_HOME']
-
-    cmd = cuda_home+'/version.txt'
-    if os.path.isfile(cmd):
-        cuda_version = run_command('cat '+cmd)
+    # dep_versions['cuda'] = 'NA'
+    # cuda_home = '/usr/local/cuda/'
+    # if 'CUDA_HOME' in os.environ:
+    #     cuda_home = os.environ['CUDA_HOME']
+    #
+    # cmd = cuda_home+'/version.txt'
+    # if os.path.isfile(cmd):
+    #     cuda_version = run_command('cat '+cmd)
+    cuda_version = torch.version.cuda
 
     dep_versions['cuda'] = cuda_version
     dep_versions['cudnn'] = torch.backends.cudnn.version()
@@ -168,7 +169,8 @@ def ge_pkg_versions():
     dep_versions['python'] = sys.version_info[0]
     dep_versions['torch'] = torch.__version__
     dep_versions['numpy'] = np.__version__
-    dep_versions['PIL'] = Image.VERSION
+    # dep_versions['PIL'] = Image.VERSION
+    dep_versions['PIL'] = Image.__version__
 
     dep_versions['OpenCV'] = 'NA'
     if 'cv2' in sys.modules:

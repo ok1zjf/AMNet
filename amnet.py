@@ -47,7 +47,7 @@ class PredictionResult():
 
         print('Id\tfilename'+(' '*(max_len-8+5))+'predicted\tGT')
         for i, (image, prediction, target) in enumerate(zip(self.image_names, self.predictions, self.targets)):
-            print(str(i)+'\t'+image + (' '*(max_len-len(image)+5)) + str(round(prediction,3)) + '  \t' + str(round(target,3)) )
+            print(str(i)+'\t'+image + (' '*(max_len-len(image)+5)) + str(round(float(prediction),3)) + '  \t' + str(round(float(target),3)) )
 
         return
 

@@ -329,6 +329,10 @@ class AMemNetModel(nn.Module):
                           name, own_state[name].size(), param.size()))
                 raise
 
-        missing = set(own_state.keys()) - set(state_dict.keys())
+        # missing = set(own_state.keys()) - set(state_dict.keys())
+
+        own_state_clean_keys = [ k for k in own_state.keys() if not k.endswith('.num_batches_tracked')]
+        missing = set(own_state_clean_keys) - set(state_dict.keys())
         if len(missing) > 0:
             raise KeyError('missing keys in state_dict: "{}"'.format(missing))
+

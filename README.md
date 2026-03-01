@@ -4,7 +4,9 @@ by Jiri Fajtl, Vasileios Argyriou, Dorothy Monekosso and Paolo Remagnino. This p
 at [CVPR 2018](http://cvpr2018.thecvf.com/).
  
 📚 Paper:[AMNet: Memorability Estimation with Attention]([https://arxiv.org/abs/1804.03115](https://openaccess.thecvf.com/content_cvpr_2018/papers/Fajtl_AMNet_Memorability_Estimation_CVPR_2018_paper.pdf))
+
 💾 Models: [Google Drive](https://drive.google.com/drive/folders/15zWFt8PgrG2Rkzckecpmpvj_CnQJVCIM?ths=true)
+
 🌐 Demo: [https://amnet.kingston.ac.uk/smem.html](https://amnet.kingston.ac.uk/smem.html)
 
 ## Installation
